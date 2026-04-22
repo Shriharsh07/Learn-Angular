@@ -13,7 +13,14 @@ import { ProfileComp } from './profile/profile';
 })
 
 export class App {
-  protected readonly title = signal('Hello World from Angular 24!');
-  name = "Shriharsh"
-  age = 24
+
+  handleClick() {
+    alert('Button Clicked!');
+    //If we are going to call another function in the same component, we can do it like this:
+    this.otherFunction(); // Call another function
+  }
+
+  otherFunction() {
+    console.log('This is another function.');
+  }
 }
